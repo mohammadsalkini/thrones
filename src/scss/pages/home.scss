@@ -1,0 +1,11 @@
+.card {
+    border: 5px solid;
+    border-radius: 20px;
+    overflow: hidden;
+    &__body{
+        img{
+            width: 400px;
+            height: 400px;       
+        }
+    }
+}

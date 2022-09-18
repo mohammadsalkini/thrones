@@ -1,1 +1,4 @@
-alert("hi form index js");
+//import css 
+import "./scss/main.scss";
+
+import "./js/pages/home";

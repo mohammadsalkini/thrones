@@ -1,0 +1,37 @@
+/*!*************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
+  \*************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap);
+/*!*****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss (1) ***!
+  \*****************************************************************************************************************/
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 100%;
+}
+
+.wrapper {
+  max-width: 95vw;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .wrapper {
+    padding: 15px;
+  }
+}
+.card {
+  border: 5px solid;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.card__body img {
+  width: 400px;
+  height: 400px;
+}

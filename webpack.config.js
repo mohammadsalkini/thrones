@@ -51,9 +51,14 @@ const webpackConfig = {
     new htmlWebpack({
       hash: true,
       template: realPath.resolve(__dirname, "./src/index.html"),
+        chunks: ["main"]
     }),
-    new webpackObfuscator({
-      rotateStringArra: true,
+      new htmlWebpack({
+          filename: "about.html",
+          template: "src/about.html"
+      }),
+      new webpackObfuscator({
+      rotateStringArray: true,
       reservedString: ["\s*"],
     }),
   ],

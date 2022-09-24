@@ -26,12 +26,137 @@ body {
     padding: 15px;
   }
 }
-.card {
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+}
+.wrapper-thrones {
   border: 5px solid;
   border-radius: 20px;
   overflow: hidden;
-}
-.card__body img {
-  width: 400px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   height: 400px;
+}
+.wrapper-thrones:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.3019607843);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.wrapper-thrones h4 {
+  position: absolute;
+  z-index: 3;
+  color: white;
+  font-size: 21px;
+  word-break: break-all;
+  word-spacing: 1px;
+  text-transform: uppercase;
+}
+.wrapper-thrones img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 360px) {
+  .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+#about-container {
+  padding: 0 15px;
+}
+#about-container h1 {
+  font-size: 25px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+#about-container p {
+  line-height: 1.8;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+form div.newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+form div.newsletter h2 {
+  text-align: center;
+}
+form div.newsletter input {
+  border: 1px solid;
+  padding: 7px;
+  box-shadow: none;
+  max-width: 500px;
+  min-width: 350px;
+}
+form div.newsletter input[type=submit] {
+  background: black;
+  width: 100%;
+  color: white;
+  border: 1px solid black;
+  cursor: pointer;
+}
+form div.newsletter input[type=submit]:hover {
+  color: black;
+  background: white;
+}
+
+header {
+  border-bottom: 1px solid;
+}
+header div:first-of-type {
+  font-weight: bold;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+header nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+header nav ul li a:hover {
+  color: red;
 }

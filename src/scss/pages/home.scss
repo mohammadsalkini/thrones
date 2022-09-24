@@ -1,11 +1,64 @@
-.card {
-    border: 5px solid;
-    border-radius: 20px;
-    overflow: hidden;
-    &__body{
-        img{
-            width: 400px;
-            height: 400px;       
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    &-thrones {
+        border: 5px solid;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 400px;
+        &:before {
+            content: "";
+            background: #0000004d;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top:0;
+            left: 0;
+            z-index: 2;
         }
+        h4 {
+            position: absolute;
+            z-index: 3;
+            color: white;
+            font-size: 21px;
+            word-break: break-all;
+            word-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 400px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    }
+
+
+@media (min-width: 360px) {
+    .wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 768px) {
+    .wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (min-width: 1024px) {
+    .wrapper {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
